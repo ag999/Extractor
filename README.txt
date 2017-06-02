@@ -15,6 +15,9 @@ Things I am still working on:
 3) Finding a better set of rules (I think I would be able to do this better after learning some Machine Learning techniques next semester)
 
 How to use:
+You would need to install an external Python library called requests if you don't have it already.
+To install the library you would need pip and the command for installing this library is `pip3 install requests`
+Once you have installed this library, follow the following steps to run the program.
 1) Navigate to the directory where the folder for this program is and open Python 3.4.3
 2) Import the module in the working environment that runs Python 3.4.3 (import extractor)
 3) Call the main function in the module and pass in the URL as the argument (something like extractor.main("https://sampleurl.com"))
