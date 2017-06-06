@@ -1,10 +1,16 @@
 import re, requests, json
 from socket import timeout
+from sys import argv
 TIMEOUT = 5 #The wait time in seconds before timing out for requesting the page
 
-def main(url):
+
+def main(argv):
     """Prints in json format the found twitter handle, facebook page id, iOS App
     Store Id and Google Play Store Id."""
+    if(type(argv) == str):
+        url = argv
+    else:
+        url = argv[0]
     regexFb = r"facebook\.com\/([a-zA-Z0-9_]+)"
     regexTwitter = r"twitter\.com\/([a-zA-Z0-9_]+)"
     regexApple = r"apple\.com\/(?:[a-zA-Z_-]+\/)?app\/[a-zA-Z0-9_-]+\/id([0-9]+)"
@@ -137,3 +143,6 @@ def listUsers(matches):
             groupNum = groupNum + 1
             returnList.append(match.group(groupNum))
     return returnList
+
+if __name__ == "__main__":
+   main(argv[1:])
