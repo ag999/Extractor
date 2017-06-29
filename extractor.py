@@ -1,3 +1,6 @@
+#  Created by Adit Gupta on 06/20/17.
+#  Copyright © 2017 Adit Gupta. All rights reserved.
+
 import re, requests, json
 from socket import timeout
 from sys import argv
